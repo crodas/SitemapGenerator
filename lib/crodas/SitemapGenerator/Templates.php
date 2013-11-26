@@ -71,14 +71,16 @@ namespace {
             }
             echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\">\n";
             foreach($urls as $url) {
-                echo "    <url>\n        <loc>" . ($url->url) . "</loc>\n";
-                if ($url->lastmod) {
-                    echo "            <lastmod>" . ($url->lastmod) . "</lastmod>\n";
+                if (!empty($url)) {
+                    echo "    <url>\n        <loc>" . ($url->url) . "</loc>\n";
+                    if ($url->lastmod) {
+                        echo "            <lastmod>" . ($url->lastmod) . "</lastmod>\n";
+                    }
+                    if ($url->changefreq) {
+                        echo "            <changefreq>" . ($url->changefreq) . "</changefreq>\n";
+                    }
+                    echo "        <priority>0.8</priority>\n    </url>\n";
                 }
-                if ($url->changefreq) {
-                    echo "            <changefreq>" . ($url->changefreq) . "</changefreq>\n";
-                }
-                echo "        <priority>0.8</priority>\n    </url>\n";
             }
             echo "</urlset>\n";
 

@@ -131,8 +131,8 @@ class Sitemap implements Iterator
             $step    = $this->step;
             $current = $step($this->cursor->current());
             if (empty($current)) {
-                $this->next();
-                return $this->current();
+                /** skip **/
+                return false;
             }
             if ($current instanceof Multiple) {
                 $this->queue = (array)$current;
