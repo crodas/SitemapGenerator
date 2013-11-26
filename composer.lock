@@ -1,0 +1,338 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "0bdcbbb7e31e33ad2d4a2ec5a9b9263d",
+    "packages": [
+        {
+            "name": "crodas/class-info",
+            "version": "v0.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crodas/ClassInfo.git",
+                "reference": "1c1e9c5f2fda39dca06009991f1d995d7a069275"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crodas/ClassInfo/zipball/1c1e9c5f2fda39dca06009991f1d995d7a069275",
+                "reference": "1c1e9c5f2fda39dca06009991f1d995d7a069275",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "crodas": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-4-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "César D. Rodas",
+                    "email": "crodas@php.net"
+                }
+            ],
+            "description": "Get classes and functions defined in a given file",
+            "time": "2013-11-15 09:33:07"
+        },
+        {
+            "name": "crodas/cli",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crodas/cli.git",
+                "reference": "e1b426e280b94c82664cc5d1e97491b8ba2be926"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crodas/cli/zipball/e1b426e280b94c82664cc5d1e97491b8ba2be926",
+                "reference": "e1b426e280b94c82664cc5d1e97491b8ba2be926",
+                "shasum": ""
+            },
+            "require": {
+                "crodas/notoj": "*",
+                "symfony/console": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "crodas": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-4-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "César D. Rodas",
+                    "email": "crodas@php.net"
+                }
+            ],
+            "description": "Simple and silly abstraction on top of symfony/console",
+            "time": "2013-11-16 03:53:28"
+        },
+        {
+            "name": "crodas/notoj",
+            "version": "v0.1.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crodas/Notoj.git",
+                "reference": "144af70634b99bf869831094b37a54e7ab1bf9bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crodas/Notoj/zipball/144af70634b99bf869831094b37a54e7ab1bf9bc",
+                "reference": "144af70634b99bf869831094b37a54e7ab1bf9bc",
+                "shasum": ""
+            },
+            "require": {
+                "crodas/class-info": "~0.1",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Notoj": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-4-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "César D. Rodas",
+                    "email": "crodas@php.net"
+                }
+            ],
+            "description": "Annotation parser. Uses reflection and provides cache out of the box.",
+            "time": "2013-11-15 18:49:28"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.3.7",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console.git",
+                "reference": "00848d3e13cf512e77c7498c2b3b0192f61f4b18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/00848d3e13cf512e77c7498c2b3b0192f61f4b18",
+                "reference": "00848d3e13cf512e77c7498c2b3b0192f61f4b18",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/event-dispatcher": "~2.1"
+            },
+            "suggest": {
+                "symfony/event-dispatcher": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-11-13 21:27:40"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "crodas/path",
+            "version": "v0.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crodas/Path.git",
+                "reference": "15ef24c4b2b81d8e5148406012af0a633126b3d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crodas/Path/zipball/15ef24c4b2b81d8e5148406012af0a633126b3d5",
+                "reference": "15ef24c4b2b81d8e5148406012af0a633126b3d5",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "crodas": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-4-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "César D. Rodas",
+                    "email": "crodas@php.net"
+                }
+            ],
+            "description": "Library to manipulate paths",
+            "time": "2013-10-23 16:48:11"
+        },
+        {
+            "name": "crodas/simple-view-engine",
+            "version": "v0.1.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crodas/SimpleView.git",
+                "reference": "c68dcccc2e39039b202fe1a8c3c996ee2844391e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crodas/SimpleView/zipball/c68dcccc2e39039b202fe1a8c3c996ee2844391e",
+                "reference": "c68dcccc2e39039b202fe1a8c3c996ee2844391e",
+                "shasum": ""
+            },
+            "require": {
+                "crodas/watch-files": "*",
+                "symfony/console": "*",
+                "symfony/finder": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-4-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "César D. Rodas",
+                    "email": "crodas@php.net"
+                }
+            ],
+            "description": "Simple View engine designed to generate code. Based on Laravel's 4 Blade.",
+            "time": "2013-11-01 05:18:28"
+        },
+        {
+            "name": "crodas/watch-files",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crodas/WatchFiles.git",
+                "reference": "b045dc0ea74791e815c2f7a0b114474131865892"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crodas/WatchFiles/zipball/b045dc0ea74791e815c2f7a0b114474131865892",
+                "reference": "b045dc0ea74791e815c2f7a0b114474131865892",
+                "shasum": ""
+            },
+            "require": {
+                "crodas/path": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "WatchFiles": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-4-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "César D. Rodas",
+                    "email": "crodas@php.net"
+                }
+            ],
+            "description": "Watch files and directories for changes",
+            "time": "2013-11-02 05:36:42"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v2.3.7",
+            "target-dir": "Symfony/Component/Finder",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Finder.git",
+                "reference": "a175521f680b178e63c5d0ab87c6b046c0990c3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/a175521f680b178e63c5d0ab87c6b046c0990c3f",
+                "reference": "a175521f680b178e63c5d0ab87c6b046c0990c3f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Finder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-09-19 09:45:20"
+        }
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

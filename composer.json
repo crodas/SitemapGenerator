@@ -1,0 +1,22 @@
+{
+    "name": "crodas/sitemap-generator",
+    "description": "Generate static sitemap to server statically",
+    "require": {
+        "crodas/cli": "*"
+    },
+    "require-dev": {
+        "crodas/simple-view-engine": "*"
+    },
+    "authors": [
+        {
+            "name": "César D. Rodas",
+            "email": "crodas@php.net"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "crodas": "lib/"
+        }
+    },
+    "minimum-stability": "stable"
+}
