@@ -52,14 +52,15 @@ class SitemapGenerator
             throw new \InvalidArgumentException("$dir is not a url (with path)");
         }
 
-        $this->dir = $dir;
-        $this->url = trim($url, '/');
+        $this->dir  = $dir;
+        $this->url  = trim($url, '/');
+        $this->host = parse_url($url, PHP_URL_SCHEME) . '://' . parse_url($url, PHP_URL_HOST);
     }
 
     public function addMap($iterable, \Closure $step, $name)
     {
         $sitemap = new Sitemap($iterable, $step);
-        $sitemap->setHost($this->url);
+        $sitemap->setHost($this->host);
         if ($this->limit > 0) {
             $url  = dirname($this->url . '/' . $name);
             $file = explode(".", basename($name));

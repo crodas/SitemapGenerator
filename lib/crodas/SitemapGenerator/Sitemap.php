@@ -57,6 +57,12 @@ class Sitemap implements Iterator
         if (!$cursor instanceof Iterator) {
             throw new \Exception("\$cusor must implement Iterator");
         }
+        if ($cursor instanceof \MongoCursor) {
+            if (!$cursor->info()['started_iterating']) {
+                /* start iterating */
+                $cursor->getNext();
+            }
+        }
         $this->cursor = $cursor;
         $this->step   = $step;
     }
@@ -140,7 +146,10 @@ class Sitemap implements Iterator
 
     public function rewind()
     {
-        // do nothing
+        if ($this->processed == 0) {
+            $this->cursor->rewind();
+        }
+        // do nothing otherwise
         $this->processed = 0;
     }
 
