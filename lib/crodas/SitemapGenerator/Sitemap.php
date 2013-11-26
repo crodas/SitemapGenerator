@@ -97,7 +97,7 @@ class Sitemap implements Iterator
                 $page++;
             } while ($this->hasMore());
             $pages = array();
-            for($i=1; $i <= $page; $i++) {
+            for($i=1; $i < $page; $i++) {
                 $pages[] = sprintf($this->url, $i);
             }
             $xml = Templates::get('index')->render(compact('pages'), true);
@@ -130,6 +130,10 @@ class Sitemap implements Iterator
         if (empty($this->current)) {
             $step    = $this->step;
             $current = $step($this->cursor->current());
+            if (empty($current)) {
+                $this->next();
+                return $this->current();
+            }
             if ($current instanceof Multiple) {
                 $this->queue = (array)$current;
                 $current = array_shift($this->queue);
