@@ -39,6 +39,7 @@ namespace crodas\SitemapGenerator;
 use Iterator;
 use Closure;
 use ArrayIterator;
+use crodas\FileUtil\File;
 
 class Sitemap implements Iterator
 {
@@ -93,7 +94,7 @@ class Sitemap implements Iterator
                 $pdir  = dirname($file);
                 $pfile = $pdir . "/" . sprintf(basename($this->url), $page);
                 $this->cleanUp($xml);
-                \crodas\File::write($pfile, $xml);
+                File::write($pfile, $xml);
                 $page++;
             } while ($this->hasMore());
             $pages = array();
@@ -102,13 +103,13 @@ class Sitemap implements Iterator
             }
             $xml = Templates::get('index')->render(compact('pages'), true);
             $this->cleanUp($xml);
-            \crodas\File::write($file, $xml);
+            File::write($file, $xml);
         } else {
             $xml = Templates::get('sitemap')->render([
                 'urls' => $this
             ], true);
             $this->cleanUp($xml);
-            \crodas\File::write($file, $xml);
+            File::write($file, $xml);
         }
     }
 
