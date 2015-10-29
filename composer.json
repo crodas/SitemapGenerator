@@ -4,6 +4,7 @@
     "require": {
         "crodas/cli": "*"
     },
+    "version": "v1.0.1",
     "require-dev": {
         "crodas/simple-view-engine": "*"
     },
